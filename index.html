@@ -13,17 +13,16 @@
         
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #f5f5f5;
             min-height: 100vh;
             padding: 10px;
         }
         
         .container {
-            max-width: 100%;
+            max-width: 95%;
             margin: 0 auto;
             background: white;
             border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
             overflow: hidden;
         }
         
@@ -59,8 +58,20 @@
         }
         
         .menu-section {
-            padding: 20px;
+            padding: 30px;
             border-bottom: 1px solid #eee;
+        }
+        
+        .menu-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+        
+        @media (min-width: 1200px) {
+            .menu-content {
+                grid-template-columns: 1fr 1fr;
+            }
         }
         
         .menu-section:last-child {
@@ -111,7 +122,7 @@
             flex-direction: column;
             align-items: flex-start;
             padding: 12px;
-            margin: 8px 0;
+            margin: 0;
             background: #f8f9fa;
             border-radius: 8px;
             border-left: 3px solid #3498db;
@@ -207,7 +218,7 @@
             font-size: 0.8em;
         }
         
-        @media (max-width: 480px) {
+        @media (max-width: 768px) {
             .header h1 {
                 font-size: 1.6em;
             }
@@ -216,17 +227,6 @@
                 width: 100%;
                 height: auto;
                 padding: 15px;
-            }
-            
-            .item-header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            
-            .item-price {
-                margin-left: 0;
-                margin-top: 5px;
-                align-self: flex-end;
             }
         }
         
@@ -277,6 +277,7 @@
         
         <div class="menu-section" id="birre_spina">
 <h2 class="section-title">Birre Spina <a href="#top" class="back-to-top">↑</a></h2>
+<div class="menu-content">
 <div class="price-table">
 <div class="price-header">
 <div class="price-row">
@@ -330,8 +331,11 @@
 <div class="item-description" style="padding: 4px 0; font-style: italic; color: #7f8c8d; font-size: 0.8em;">Grodizkie</div>
 </div>
 </div>
+</div>
+</div>
 <div class="menu-section" id="bevande">
 <h2 class="section-title">Bevande <a href="#top" class="back-to-top">↑</a></h2>
+<div class="menu-content">
 <div class="menu-item">
 <div class="item-header">
 <div class="item-name">Spritz Campari</div>
@@ -375,8 +379,10 @@
 <div class="item-description">(Gin disponibili guardare la sezione "Gin")</div>
 </div>
 </div>
+</div>
 <div class="menu-section" id="birre_bottiglia">
 <h2 class="section-title">Birre Bottiglia <a href="#top" class="back-to-top">↑</a></h2>
+<div class="menu-content">
 <div class="menu-item">
 <div class="item-header">
 <div class="item-name">Deiva - <span class="item-producer">Altavia</span></div>
@@ -902,8 +908,10 @@ Abruzzese</span></div>
 <div class="item-description">Imperial Sacher Porter</div>
 </div>
 </div>
+</div>
 <div class="menu-section" id="bag_in_box">
 <h2 class="section-title">Bag in Box <a href="#top" class="back-to-top">↑</a></h2>
+<div class="menu-content">
 <div class="menu-item">
 <div class="item-header">
 <div class="item-name">Oolong Roasted Tea - <span class="item-producer">Oud Beersel</span></div>
@@ -919,8 +927,10 @@ Abruzzese</span></div>
 <div class="item-description">Lambic</div>
 </div>
 </div>
+</div>
 <div class="menu-section" id="sidri">
 <h2 class="section-title">Sidri <a href="#top" class="back-to-top">↑</a></h2>
+<div class="menu-content">
 <div class="menu-item">
 <div class="item-header">
 <div class="item-name">Cheeky Cider 2023 - <span class="item-producer">Apple Blood Cider</span></div>
@@ -957,8 +967,10 @@ Abruzzese</span></div>
 <div class="item-description">Cider</div>
 </div>
 </div>
+</div>
 <div class="menu-section" id="gin_tonic">
 <h2 class="section-title">Gin Tonic <a href="#top" class="back-to-top">↑</a></h2>
+<div class="menu-content">
 <div class="menu-item">
 <div class="item-header">
 <div class="item-name">Autunno - <span class="item-producer">EUGIN</span></div>
@@ -1072,8 +1084,10 @@ Abruzzese</span></div>
 <div class="item-description">Alcohol Free</div>
 </div>
 </div>
+</div>
 <div class="menu-section" id="amari">
 <h2 class="section-title">Amari <a href="#top" class="back-to-top">↑</a></h2>
+<div class="menu-content">
 <div class="menu-item">
 <div class="item-header">
 <div class="item-name">Costa dei Trabocchi - <span class="item-producer">JMEF</span></div>
@@ -1131,8 +1145,10 @@ Abruzzese</span></div>
 <div class="item-description">Mitro australiano</div>
 </div>
 </div>
+</div>
 <div class="menu-section" id="liquori">
 <h2 class="section-title">Liquori <a href="#top" class="back-to-top">↑</a></h2>
+<div class="menu-content">
 <div class="menu-item">
 <div class="item-header">
 <div class="item-name">Genziana - <span class="item-producer">SCUPPOZ</span></div>
@@ -1190,8 +1206,10 @@ Abruzzese</span></div>
 <div class="item-description">Prugnolo</div>
 </div>
 </div>
+</div>
 <div class="menu-section" id="whisky">
 <h2 class="section-title">Whisky <a href="#top" class="back-to-top">↑</a></h2>
+<div class="menu-content">
 <div class="menu-item">
 <div class="item-header">
 <div class="item-name">Bourbon - <span class="item-producer">Wild Turkey</span></div>
@@ -1220,8 +1238,10 @@ Abruzzese</span></div>
 <div class="item-description">Smoke malt rye whisky</div>
 </div>
 </div>
+</div>
 <div class="menu-section" id="analcoliche">
 <h2 class="section-title">Analcoliche <a href="#top" class="back-to-top">↑</a></h2>
+<div class="menu-content">
 <div class="menu-item">
 <div class="item-header">
 <div class="item-name">Acqua 0.5l</div>
@@ -1271,10 +1291,11 @@ Abruzzese</span></div>
 </div>
 </div>
 </div>
+</div>
 
         
         <div class="footer">
-            <p>Generato il 15/09/2025 22:45 | Menu The Craft</p>
+            <p>Generato il 15/09/2025 23:33 | Menu The Craft</p>
         </div>
     </div>
 </body>
